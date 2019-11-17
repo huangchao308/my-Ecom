@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h1 Product List
+  .content-box
+    if productList.length
+      .item-list
+        each product in productList
+          .item
+            strong= product.name + ' '
+            p= product.price
+            hr
+
+    else 
+      p No product
+
+    

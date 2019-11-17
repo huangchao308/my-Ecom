@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  h1 Category List
+  .content-box
+    if categoryList.length
+      .item-list
+        each category in categoryList
+          .item
+            a(href='/category/' + category._id)= category.name
+            button.del-btn(data-id=category._id) Delete
+
+    else 
+      p No Category
+
+    

@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 Category Detail
+  .content-box
+    - var parentCategory = category.parentCategory ? category.parentCategory.name : null
+    .label
+      | Name:
+      input(type="text" value=category.name)
+      | Parent Category:
+      input(type="text" value=parentCategory)
+      
